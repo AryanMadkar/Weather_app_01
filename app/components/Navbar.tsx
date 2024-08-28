@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "@/components/ui/button";
 import { FcSearch } from "react-icons/fc";
 import { FcLandscape } from "react-icons/fc";
 
 import "./mini.css";
 import Searchdialoge from "./Searchdialoge";
-const Navbar = () => {
+import { useGlobalContext } from "../context/GLobal_context";
+const Navbar = () => {  
   return (
     <div className="w-full fox flex-row  min-h-4rem py-4 p-2 flex items-center justify-between">
       <div className="left text-3xl h-full w-1/3 flex">

@@ -7,9 +7,18 @@
   src: url("./Agraham.otf");
 }
 
+* {
+  transition: all 0.3s ease-in-out ;
+}
+
+.progress {
+  background: linear-gradient(90deg, rgb(0, 0, 180) 0%, rgb(0, 172, 172) 33%, rgb(0, 163, 0) 66%, rgb(185, 185, 1) 90%, rgb(180, 0, 0) 100%);
+}
+
 @font-face {
   font-family: foxsin;
   src: url("./trex.ttf");
+  font-weight: 300;
 }
 
 @layer base {
