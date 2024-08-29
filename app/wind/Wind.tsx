@@ -22,7 +22,7 @@ const Wind = () => {
   }
 
   return (
-    <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col relative dark:bg-zinc-900 h-[10rem] w-fit">
+    <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col relative simpback h-[10rem] w-fit">
       <h2 className="flex gap-2 item-center justify-center">
         <GiWhirlwind />
         Wind

@@ -23,7 +23,7 @@ const PRessure = () => {
     );
   }
   return (
-    <div className="val nom p-2 gap-1  bg-zinc-900 border py-[1rem] w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between ">
+    <div className="val nom p-2 gap-1  simpback border py-[1rem] w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between ">
       <h1 className="flex items-center justify-start gap-2">
         <BsSpeedometer />
         Presure

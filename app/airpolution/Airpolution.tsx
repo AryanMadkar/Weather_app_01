@@ -28,7 +28,7 @@ const Airpolution = () => {
   }
 
   return (
-    <div className="col-span-full nom py-3 px-4 rounded-xl flex flex-col gap-7 dark:bg-zinc-900 h-[10rem] w-[40vw]">
+    <div className="col-span-full nom py-3 px-4 rounded-xl flex flex-col gap-7 simpback h-[10rem] w-[40vw]">
       <h2 className="flex text-lg ">
         <FcAreaChart className="text-2xl" />
         Air polution

@@ -55,7 +55,7 @@ const Ninedayfor = () => {
   }
 
   return (
-    <div className="val nom p-2 bg-zinc-900 border w-full min-h-[50vh]  rounded-xl flex flex-col justify-start">
+    <div className="val nom p-2 simpback border w-full min-h-[50vh]  rounded-xl flex flex-col justify-start">
       <h1 className="flex items-center justify-start gap-2">
         <SlCalender className="font-bold" />
         <span>5-day Forecast for {city}</span>

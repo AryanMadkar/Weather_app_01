@@ -19,7 +19,7 @@ const Sunset = () => {
     return <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col gap-7  h-[10rem] w-fit"><span className="loading h-full  loading-infinity loading-lg"></span></div>;
   }
   return (
-    <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col gap-7 dark:bg-zinc-900 h-[10rem] w-fit">
+    <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col gap-7 simpback h-[10rem] w-fit">
       <div className="top  flex m-[2rem] flex-col items-center justify-around w-full">
         <div className="flex flex-col justify-around h-full w-1/2">
           <p className="flex text-lg items-center gap-2 font-medium">

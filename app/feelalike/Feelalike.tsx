@@ -27,7 +27,7 @@ const Feelalike = () => {
   }
 
   return (
-    <div className="val nom p-2 gap-1  bg-zinc-900 border w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between ">
+    <div className="val nom p-2 gap-1 simpback   border w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between ">
       <h1 className="flex text-sm items-center justify-start gap-2">
         <LuThermometerSun /> FeelAlive
       </h1>

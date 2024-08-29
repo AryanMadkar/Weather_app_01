@@ -9,7 +9,7 @@ import Searchdialoge from "./Searchdialoge";
 import { useGlobalContext } from "../context/GLobal_context";
 const Navbar = () => {  
   return (
-    <div className="w-full fox flex-row  min-h-4rem py-4 p-2 flex items-center justify-between">
+    <div className="w-full fox flex-row mainnav mb-[1rem] min-h-4rem py-4 p-2 flex items-center justify-between">
       <div className="left text-3xl h-full w-1/3 flex">
         <h1 className=" font-bold  "> Weather</h1>{" "}
         <span className="text-red-700  ">App</span>

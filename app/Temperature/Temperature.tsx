@@ -47,7 +47,7 @@ const Temperature = () => {
   return (
     <div
       id="val"
-      className="val  nom pt-6 pb-5 bg-zinc-900 border w-[18rem] min-h-[50vh] rounded-xl flex flex-col justify-between "
+      className="val  nom pt-6 pb-5 simpback border w-[18rem] min-h-[50vh] rounded-xl flex flex-col justify-between "
     >
       <div className="uppertemp w-full h-[15%] flex flex-row px-2 justify-between items-start ">
         <div className="flex flex-col leading-none items-start justify-center gap-2">

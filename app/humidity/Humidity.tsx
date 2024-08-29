@@ -23,7 +23,7 @@ const Humidity = () => {
   }
 
   return (
-    <div className="val nom p-2 gap-1  bg-zinc-900 border w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between py-[1rem]">
+    <div className="val nom p-2 gap-1  simpback border w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between py-[1rem]">
       <h1 className="flex items-center justify-start gap-2">
         <WiHumidity />
         Humidity
