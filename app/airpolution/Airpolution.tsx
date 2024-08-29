@@ -18,8 +18,13 @@ const Airpolution = () => {
     return item.rating === airqualityindex;
   });
 
-  if (!polution||!airqualityindex) {
-    return <div>Loading....</div>;
+  if (!polution || !airqualityindex) {
+    return (
+      <div className="col-span-full nom py-3 px-4 rounded-xl flex flex-col gap-7  h-[10rem] w-[40vw]">
+        {" "}
+        <span className="loading h-full  loading-infinity loading-lg"></span>
+      </div>
+    );
   }
 
   return (

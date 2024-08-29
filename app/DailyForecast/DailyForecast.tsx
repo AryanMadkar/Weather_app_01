@@ -18,7 +18,11 @@ const DailyForecast = () => {
   const { city, list } = fivedays;
 
   if (!forecast || !weather || !fivedays) {
-    return <div>Loading....</div>;
+    return (
+      <div className="col-span-full nom py-3 px-4 rounded-xl flex flex-col gap-7  h-[10rem] w-[40vw]">
+        <span className="loading h-full  loading-infinity loading-lg"></span>
+      </div>
+    );
   }
 
   const today = new Date();

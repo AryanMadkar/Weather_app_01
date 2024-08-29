@@ -45,12 +45,11 @@ const Ninedayfor = () => {
     const dailyData = list?.slice(i, i + 5);
     dailyfocus.push(processdata(dailyData));
   }
-  console.log(dailyfocus);
 
-  if (!fivedays) {
+  if (!fivedays||!list||!city||!dailyfocus) {
     return (
-      <div>
-        <h1>Looding...</h1>
+      <div className="val nom p-2  w-full min-h-[50vh]  rounded-xl flex flex-col justify-start">
+        <span className="loading h-full  loading-infinity loading-lg"></span>
       </div>
     );
   }

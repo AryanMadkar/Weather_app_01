@@ -13,6 +13,15 @@ const Humidity = () => {
     desc = "high:it seem more humid";
   }
 
+  if (!forecast || !humidity) {
+    return (
+      <div className="val nom p-2 gap-1   w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between py-[1rem] ">
+        {" "}
+        <span className="loading h-full  loading-infinity loading-lg"></span>
+      </div>
+    );
+  }
+
   return (
     <div className="val nom p-2 gap-1  bg-zinc-900 border w-[14rem] min-h-[24vh] rounded-xl flex flex-col justify-between py-[1rem]">
       <h1 className="flex items-center justify-start gap-2">

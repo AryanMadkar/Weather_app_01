@@ -27,10 +27,10 @@ const Mapbox = () => {
 
   const activecitycordinates1 = forecast?.coord;
 
-  if (!forecast || !activecitycordinates1||!forecast.coord) {
+  if (!forecast || !activecitycordinates1 ) {
     return (
-      <div>
-        <h1>Loding...</h1>
+      <div className="flex-1 min-h-[20rem] basis-[50%]  col-span-3 rounded-xl ">
+        <span className="loading h-full  loading-infinity loading-lg"></span>
       </div>
     );
   }
@@ -49,7 +49,6 @@ const Mapbox = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <FlytoActualCity activecitycordinates={activecitycordinates1} />
-        
       </MapContainer>
     </div>
   );

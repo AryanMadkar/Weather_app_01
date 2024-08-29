@@ -11,12 +11,12 @@ const Sunset = () => {
   const times = forecast && forecast.sys && forecast.sys.sunset;
   const times2 = forecast && forecast.sys && forecast.sys.sunrise;
   //   const times = forecast?.sys.sunset;
-  const timezone = forecast?.timezone;
-
+  const timezone = forecast?.timezone; 
+ 
   const sunsettime = unixtotime(times, timezone);
   const sunrisetime = unixtotime(times2, timezone);
-  if (!forecast||!sunrisetime||!sunsettime) {
-    return <div>Loading....</div>;
+  if (!forecast||!sunrisetime||!sunsettime||!timezone) {
+    return <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col gap-7  h-[10rem] w-fit"><span className="loading h-full  loading-infinity loading-lg"></span></div>;
   }
   return (
     <div className="col-span-full nom py-3 px-4 rounded-xl flex items-center justify-center flex-col gap-7 dark:bg-zinc-900 h-[10rem] w-fit">

@@ -17,6 +17,7 @@ import Mapbox from "./Mapbox/Mapbox";
 import Topg from "./Toplcities/Topg";
 import Footer from "./footer/Footer";
 
+
 export default function Home() {
   return (
     <main className="bg-black flex   flex-col min-h-[100vh] overflow-x-hidden w-[100vw] text-white">
@@ -30,13 +31,13 @@ export default function Home() {
           <div className="flex flex-col w-full ">
             <div className="instruments   h-full w-full gap-4 flex flex-row item-start">
               <Airpolution />
-            <Sunset />
-            <Wind />
+              <Sunset />
+              <Wind />
             </div>
             <div className="instruments mt-[1rem] h-full w-full  gap-4 flex flex-row item-start">
               <DailyForecast />
-            <Uvindex />
-            <Population/>
+              <Uvindex />
+              <Population />
             </div>
           </div>
         </div>
@@ -54,14 +55,15 @@ export default function Home() {
             <div className="min-h-[50vh] w-full  flex flex-row items-center justify-between">
               <div className="h-full  w-[100%]  flex items-start justify-center gap-2">
                 <Mapbox />
-                <div className="states flex flex-col gap-3 flex-1 border-2 border-white rounded-2xl h-full"><Topg/></div>
+                <div className="states flex flex-col gap-3 flex-1 border-2 border-white rounded-2xl h-full">
+                  <Topg />
+                </div>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

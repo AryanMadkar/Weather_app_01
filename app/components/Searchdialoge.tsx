@@ -1,31 +1,29 @@
 "use CLient";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import {
-  Command,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "@/components/ui/command";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Command, CommandInput } from "@/components/ui/command";
+
 import { FcBinoculars } from "react-icons/fc";
+import {
+  useGlobalContext,
+  useGlobalContextUpdate,
+} from "../context/GLobal_context";
 
 const Searchdialoge = () => {
+  const [hover, setHover] = React.useState<number>(0);
+  const { geocoded, inputvalue, handleInput } = useGlobalContext();
+  const { setactivecity } = useGlobalContextUpdate();
+
+  const getclickcoordinates = (lat: Number, lon: Number) => {
+    setactivecity([lat, lon]);
+  };
   return (
     <div className="search flex items-center justify-center gap-0">
       {/* <Input className="outline-none" /> */}
@@ -47,10 +45,49 @@ const Searchdialoge = () => {
             <DialogTitle>Search here</DialogTitle>
           </DialogHeader>
           <Command className="rounded-lg border ">
-            <CommandInput placeholder="type a command or search here....." />
+            <input
+              type="text"
+              className="p-[1rem] rounded-lg"
+              value={inputvalue}
+              onChange={handleInput}
+              placeholder="type a command or search here....."
+            />
             <ul className="px-2 pb-2">
               <p className="p-2 text-sm text-muted-foreground pt-2 cursor-pointer">
                 Suggestions
+                {geocoded?.length === 0 || (!geocoded && <p>NO results</p>)}
+                {geocoded &&
+                  geocoded.map(
+                    (
+                      item: {
+                        name: string;
+                        country: string;
+                        state: string;
+                        lat: number;
+                        lon: number;
+                      },
+                      index: number
+                    ) => {
+                      const { country, name, state } = item;
+
+                      return (
+                        <li
+                          onMouseEnter={() => {
+                            setHover(index);
+                          }}
+                          key={index}
+                          className="py-3 hover:scale-105 hover:bg-black transition-all px-2 text-sm  cursor-default"
+                          onClick={() => {
+                            getclickcoordinates(item.lat, item.lon);
+                          }}
+                        >
+                          <p className="text">
+                            {name + " "},{state && state + " "},{country}
+                          </p>
+                        </li>
+                      );
+                    }
+                  )}
               </p>
             </ul>
           </Command>
